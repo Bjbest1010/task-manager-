@@ -1133,9 +1133,25 @@
   }
   .top-actions {
     gap: 7px;
+    min-width: 0;
+    flex: 1;
+    justify-content: flex-end;
   }
   .global-search {
-    width: 150px;
+    width: 130px;
+    min-width: 0;
+    flex-shrink: 1;
+    padding: 9px 8px;
+  }
+  .top-actions > button {
+    flex-shrink: 0;
+    width: 36px;
+  }
+  .top-actions > button > svg {
+    display: none;
+  }
+  .breadcrumb {
+    flex-shrink: 0;
   }
   .top-divider {
     display: none;
@@ -1168,20 +1184,22 @@
     min-height: 205px;
   }
   .welcome-copy {
-    max-width: 75%;
+    max-width: 100%;
   }
   .welcome-band h2 {
     font-size: 21px;
   }
   .welcome-band p {
-    max-width: 260px;
+    max-width: 210px;
     font-size: 11px;
   }
   .welcome-image {
-    width: 180px;
-    right: -45px;
-    object-fit: cover;
-    opacity: 0.65;
+    width: 120px;
+    height: 120px;
+    right: -12px;
+    top: 70px;
+    object-fit: contain;
+    opacity: 0.9;
   }
   .stats-grid {
     grid-template-columns: 1fr 1fr;
@@ -1211,12 +1229,12 @@
   }
   .progress-content {
     justify-content: center;
-    padding: 23px;
-    gap: 34px;
+    padding: 20px 17px;
+    gap: 20px;
   }
   .donut {
-    width: 142px;
-    height: 142px;
+    width: 126px;
+    height: 126px;
   }
   .legend {
     max-width: 200px;
