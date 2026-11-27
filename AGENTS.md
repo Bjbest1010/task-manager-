@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Workspace architecture
+- Public content routes render a sample workspace when signed out; session-only demo edits never write to sample database rows, so the prototype remains immediately usable without exposing private records.
+- Signed-in workspace CRUD and document access use the generated browser client with owner-scoped RLS; never use privileged clients for ordinary workspace operations.
+- Keep workspace state in the root WorkspaceProvider and shared forms in workspace components, so navigation preserves edits and all views reflect the same records.
+- Verification and skill validation are user-recorded tracking labels, not external verification; statuses are explicitly identified as illustrative in sample data.
